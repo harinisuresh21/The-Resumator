@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The Résumator 🔥</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+  <div class="container">
+    <h1 class="heading">The Résumator 😎🤖</h1>
+    <p class="subheading">“Hasta la vista, messy resumes.”</p>
+
+    <div class="content-box">
+      <!-- Left Side: Info -->
+      <div class="info-box">
+        <h2>📝 What’s This All About?</h2>
+        <p><strong>Welcome to the Résume Parser!</strong> 🧑‍💻</p>
+        <p>Just upload your resume (PDF or DOCX) and boom 💥 — we’ll extract your name, email, skills, and experience right here.</p>
+        <p>It’s like giving your resume a mini brain 🧠 that knows what to find and where to look.</p>
+        <p>Try it out, and see the magic! ✨</p>
+      </div>
+
+      <!-- Right Side: Upload -->
+      <div class="upload-box">
+        <h2>📤 Upload Your Resume</h2>
+        <p>Accepted file types: <strong>.pdf, .docx</strong></p>
+        <p>Max file size: <strong>2MB</strong></p>
+
+        <form method="POST" enctype="multipart/form-data">
+          <input type="file" name="resume" id="fileInput" hidden>
+          <label for="fileInput" class="custom-file-label">Choose File</label>
+          <p id="fileNameDisplay" class="file-name">No file selected</p>
+          <button type="submit" class="upload-btn">Upload</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    const fileInput = document.getElementById('fileInput');
+    const fileNameDisplay = document.getElementById('fileNameDisplay');
+
+    fileInput.addEventListener('change', () => {
+      const fileName = fileInput.files.length > 0 ? fileInput.files[0].name : 'No file selected';
+      fileNameDisplay.textContent = `Selected File: ${fileName}`;
+    });
+  </script>
+</body>
+</html>

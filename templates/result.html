@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Résumé Summary</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='result.css') }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+  <div class="container">
+    <h1 class="title">📄 Résumé Summary</h1>
+    <p class="subtitle">Here’s what we found in your uploaded file:</p>
+
+    <div class="result-box">
+      <p><strong>👤 Name:</strong> {{ data.name or 'Not Found' }}</p>
+      <p><strong>📧 Email:</strong> {{ data.email or 'Not Found' }}</p>
+      <p><strong>📱 Phone:</strong> {{ data.phone or 'Not Found' }}</p>
+      <p><strong>🛠️ Skills:</strong> 
+        {% if data.skills %}
+          {{ data.skills | join(', ') }}
+        {% else %}
+          Not Found
+        {% endif %}
+      </p>
+      <p><strong>🧾 Experience:</strong> {{ data.experience }}</p>
+
+    </div>
+
+    <a href="/" class="back-btn">🔙 Parse Another Résumé</a>
+  </div>
+
+</body>
+</html>
