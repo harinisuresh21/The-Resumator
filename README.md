@@ -44,7 +44,7 @@ A smart and stylish resume parser web application built with **Python (Flask)**,
 
 ---
 
-## 📂 Project Structure
+<pre>  📂 Project Structure
 resume-parser/
 │
 ├── app.py # Flask application logic
@@ -58,7 +58,8 @@ resume-parser/
 │ ├── style.css # Styles for index page
 │ └── result.css # Styles for result page
 │
-└── README.md
+└── README.md </pre>
+
 
 
 ---
@@ -99,5 +100,6 @@ Deployed at: https://theresumator.onrender.com
 ---
 
 
-
+<img width="1366" height="675" alt="Screenshot (309)" src="https://github.com/user-attachments/assets/68ea89e9-9f7a-45f9-843a-af12994c8f0b" />
+<img width="1366" height="669" alt="Screenshot (308)" src="https://github.com/user-attachments/assets/8abc3109-2a96-4ac9-b800-42aac1db38d1" />
 
