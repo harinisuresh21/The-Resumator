@@ -9,7 +9,7 @@ body {
 }
 
 .container {
-  max-width: 600px;
+  max-width: 800px;
   margin: 0 auto;
   padding: 30px 20px;
 }
@@ -32,14 +32,13 @@ body {
   border-radius: 12px;
   box-shadow: 0 10px 20px rgba(94, 44, 165, 0.15);
   text-align: left;
-  animation: scaleUp 3s ease;
-  padding-left: 70PX;
-  text-align: justify;
+  animation: scaleUp 1.2s ease;
 }
 
 .result-box p {
-  font-size: 25px;
+  font-size: 20px;
   margin: 15px 0;
+  line-height: 1.6;
 }
 
 .back-btn {
@@ -51,12 +50,78 @@ body {
   text-decoration: none;
   border-radius: 8px;
   font-weight: 600;
-  transition: background 3s ease, transform 0.3s ease;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .back-btn:hover {
   background-color: #7c3aed;
   transform: scale(1.05);
+}
+
+/* Flex container */
+.content-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+/* Left and Right boxes */
+.info-box, .upload-box {
+  flex: 1;
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(94, 44, 165, 0.1);
+  animation: scaleUp 1.2s ease;
+}
+
+/* Responsive Typography */
+.info-box p,
+.upload-box p {
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* File Upload */
+.custom-file-label {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #5e2ca5;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.custom-file-label:hover {
+  background-color: #7c3aed;
+}
+
+.upload-btn {
+  margin-top: 15px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #2ebf91;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.upload-btn:hover {
+  background-color: #219b75;
+}
+
+.file-name {
+  margin-top: 10px;
+  color: #555;
 }
 
 /* Animations */
@@ -70,15 +135,28 @@ body {
   to   { transform: scale(1); opacity: 1; }
 }
 
-@media (max-width: 600px) {
+/* ===== Responsive Design for Mobile ===== */
+@media (max-width: 768px) {
+  .content-box {
+    flex-direction: column;
+    gap: 20px;
+  }
+
   .result-box {
+    padding: 20px;
     text-align: center;
   }
-}
-.content-box {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 20px;
+
+  .info-box, .upload-box {
+    width: 100%;
+  }
+
+  .result-box p {
+    font-size: 18px;
+  }
+
+  .custom-file-label, .upload-btn, .back-btn {
+    width: 100%;
+    box-sizing: border-box;
+  }
 }
