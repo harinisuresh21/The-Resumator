@@ -28,11 +28,13 @@ body {
 
 .result-box {
   background-color: #fff;
-  padding: 25px 20px;
+  padding: 25px 60px;
   border-radius: 12px;
   box-shadow: 0 10px 20px rgba(94, 44, 165, 0.15);
   text-align: left;
-  animation: scaleUp 0.8s ease;
+  animation: scaleUp 3s ease;
+  padding-left: 70PX;
+  text-align: justify;
 }
 
 .result-box p {
