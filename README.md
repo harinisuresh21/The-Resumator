@@ -95,7 +95,7 @@ python -m spacy download en_core_web_sm
 ### 5.Visit http://127.0.0.1:5000 in your browser.
 
 ### 🌍 Live Demo
-Deployed at: https://theresumator.onrender.com
+Deployed at: [https://theresumator.onrender.com](https://the-resumator.onrender.com/)
 
 ---
 
